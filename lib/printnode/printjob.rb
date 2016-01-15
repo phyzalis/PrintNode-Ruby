@@ -16,11 +16,11 @@ module PrintNode
       hash['printerId'] = @printer_id
       hash['title'] = @title
       hash['contentType'] = @content_type
-      if @content_type.match('base64$')
-        hash ['content'] = Base64.encode64(IO.read(@content))
-      else
+#      if @content_type.match('base64$')
+#        hash ['content'] = Base64.encode64(IO.read(@content))
+#      else
         hash ['content'] = @content
-      end
+#      end
       hash['source'] = @source
       hash
     end
